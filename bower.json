@@ -1,0 +1,19 @@
+{
+	"name": "CNJS-HeightEqualizer",
+	"description": "Sets equal height on a collection of DOM ELs",
+	"version": "0.1.0",
+	"main": [
+		"assets/HeightEqualizer.js"
+	],
+	"authors": [
+		"Chris Nelson <cnelson87@gmail.com>"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cnelson87/CNJS-HeightEqualizer"
+	},
+	"dependencies": {
+		"jquery": "~2.1.1"
+	},
+	"private": false
+}
