@@ -2,7 +2,10 @@
 	"name": "CNJS-HeightEqualizer",
 	"description": "Sets equal height on a collection of DOM ELs",
 	"version": "0.1.0",
-	"main": "assets/HeightEqualizer.js",
+	"main": [
+		"assets/HeightEqualizer.js",
+		"assets/HeightEqualizer.css"
+	],
 	"authors": [
 		"Chris Nelson <cnelson87@gmail.com>"
 	],
