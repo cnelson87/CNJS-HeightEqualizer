@@ -3,41 +3,44 @@
 
 	DESCRIPTION: Sets equal height on a collection of DOM ELs
 
-	VERSION: 0.1.0
+	VERSION: 0.2.0
 
-	USAGE: var myHeightEqualizer = new HeightEqualizer('Elements', 'Options')
+	USAGE: var myHeightEqualizer = new HeightEqualizer('El', 'Options')
 		@param {jQuery Object}
 		@param {Object}
 
-	AUTHORS: CN
+	AUTHOR: CN
 
 	DEPENDENCIES:
-		- jQuery 1.10+
+		- jQuery 2.1.4+
 
 */
 
-var HeightEqualizer = function($items, objOptions) {
-	this.$items = $items;
+var HeightEqualizer = function($el, objOptions) {
+	this.$el = $el;
 	this.options = $.extend({
+		selectorItems: '> div',
 		setParentHeight: false
 	}, objOptions || {});
 
-	this.$elParent = this.options.setParentHeight ? this.$items.first().parent() : null;
+	// element references
+	this.$items = this.$el.find(this.options.selectoritems);
 
 	this._len = this.$items.length;
 	if (this._len <= 1) {return;}
 
 	this.maxHeight = 0;
 
-	this.getHeight();
+	this.calcHeight();
 	this.setHeight();
 
 };
 HeightEqualizer.prototype = {
-	getHeight: function() {
+	calcHeight: function() {
 		var heightCheck = 0;
 		for (var i=0; i<this._len; i++) {
-			heightCheck = $(this.$items[i]).innerHeight();
+			//outerHeight includes height + padding + border
+			heightCheck = $(this.$items[i]).outerHeight();
 			if (heightCheck > this.maxHeight) {
 				this.maxHeight = heightCheck;
 			}
@@ -46,20 +49,19 @@ HeightEqualizer.prototype = {
 	setHeight: function() {
 		this.$items.css({height: this.maxHeight});
 		if (this.options.setParentHeight) {
-			this.$elParent.css({height: this.maxHeight});
+			this.$el.css({height: this.maxHeight});
 		}
 	},
 	resetHeight: function() {
 		this.maxHeight = 0;
 		this.$items.css({height: ''});
 		if (this.options.setParentHeight) {
-			this.$elParent.css({height: ''});
+			this.$el.css({height: ''});
 		}
-		this.getHeight();
+		this.calcHeight();
 		this.setHeight();
 	}
 };
-
 
 //uncomment to use as a browserify module
 //module.exports = HeightEqualizer;

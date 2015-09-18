@@ -12,8 +12,5 @@
 		"type": "git",
 		"url": "https://github.com/cnelson87/CNJS-HeightEqualizer"
 	},
-	"dependencies": {
-		"jquery": "~2.1.4"
-	},
-	"ignore": []
+	"readmeFilename": "README.md"
 }
