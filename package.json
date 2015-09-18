@@ -1,16 +1,15 @@
 {
 	"name": "CNJS-HeightEqualizer",
 	"description": "Sets equal height on a collection of DOM ELs",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"main": [
 		"assets/HeightEqualizer.js"
-	],
-	"authors": [
-		"Chris Nelson <cnelson87@gmail.com>"
 	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/cnelson87/CNJS-HeightEqualizer"
 	},
+	"license": "MIT",
+	"author": "Chris Nelson <cnelson87@gmail.com>",
 	"readmeFilename": "README.md"
 }
