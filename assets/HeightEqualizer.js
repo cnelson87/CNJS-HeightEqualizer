@@ -3,7 +3,7 @@
 
 	DESCRIPTION: Sets equal height on a collection of DOM ELs
 
-	VERSION: 0.2.0
+	VERSION: 0.2.2
 
 	USAGE: var myHeightEqualizer = new HeightEqualizer('El', 'Options')
 		@param {jQuery Object}
@@ -24,7 +24,7 @@ var HeightEqualizer = function($el, objOptions) {
 	}, objOptions || {});
 
 	// element references
-	this.$items = this.$el.find(this.options.selectoritems);
+	this.$items = this.$el.find(this.options.selectorItems);
 
 	this._len = this.$items.length;
 	if (this._len <= 1) {return;}

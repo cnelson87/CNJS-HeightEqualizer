@@ -1,7 +1,7 @@
 {
 	"name": "CNJS-HeightEqualizer",
 	"description": "Sets equal height on a collection of DOM ELs",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"main": [
 		"assets/HeightEqualizer.js"
 	],
