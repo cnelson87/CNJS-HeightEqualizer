@@ -1,7 +1,7 @@
 {
 	"name": "CNJS-HeightEqualizer",
 	"description": "Sets equal height on a collection of DOM ELs",
-	"version": "0.2.2",
+	"version": "0.2.3",
 	"main": [
 		"assets/HeightEqualizer.js"
 	],
@@ -10,7 +10,7 @@
 		"url": "https://github.com/cnelson87/CNJS-HeightEqualizer"
 	},
 	"dependencies": {
-		"jquery": "~2.1.4"
+		"jquery": "~2.2.0"
 	},
 	"ignore": [],
 	"license": "MIT",
