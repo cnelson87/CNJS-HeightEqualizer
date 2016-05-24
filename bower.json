@@ -10,7 +10,7 @@
 		"url": "https://github.com/cnelson87/CNJS-HeightEqualizer"
 	},
 	"dependencies": {
-		"jquery": "~2.2.1"
+		"jquery": "~2.2.4"
 	},
 	"ignore": [],
 	"license": "MIT",
